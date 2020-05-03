@@ -1,0 +1,96 @@
+<style>
+.mainWrap {
+    width: 100%;
+    height:  100%;
+    display:  flex;
+    flex-direction:  column;
+    justify-content:  center;
+    align-items:  center;
+}
+
+.heading {
+    font-size:  10vmin;
+    font-weight:  500;
+    animation: zoomin .55s 1 alternate;
+    text-align: center;
+}
+
+.details {
+    font-size:  3vmin;
+    margin-top:  15px;
+    animation: zoomin .75s 1 alternate;
+    text-align: center;
+}
+
+@keyframes zoomin{
+    from{
+        transform : scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.header {
+    position:  fixed;
+    text-align:  0;
+    top: 0;
+    width:  100%;
+    background: rgba(0,0,0,1);
+    height: 55px;
+    left:  0;
+    animation: slideDown .35s 1 alternate;
+}
+
+.footer {
+    background:  #333;
+    position: fixed;
+    text-align: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    animation: slideUp .35s 1 alternate;
+}
+
+@keyframes slideDown{
+    from{
+        top:-55px;
+    }
+}
+
+@keyframes slideUp{
+    from{
+        bottom:-85px;
+    }
+}
+.celluLogo {
+    width: 265px;
+    height: 100px;
+    /* background:  red; */
+    float:  left;
+    display:  block;
+    position:  relative;
+    margin-top:  -55px;
+    background: url('http://cellularworld.co.in/Images/SiteMain/CELLU LOGO WHITE.png');
+    background-size:  contain;
+    background-repeat:  no-repeat;
+    animation: zoomin .75s 1 alternate;
+}
+</style>
+<div class="header"></div>
+<div class="mainWrap">
+    <div class="celluLogo"></div>
+	<div class="heading">
+		Bad request
+	</div>
+	<div class="details">
+		Please contact us at <a href="mailto:info@cellularworld.co.in">info@cellularworld.co.in</a> for more info.
+	</div>
+</div>
+
+<div class="footer"></div>
+
+<!-- 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+--> 

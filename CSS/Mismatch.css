@@ -1,0 +1,90 @@
+.devicePageWrap {
+    min-height: calc(100vh - 90px);
+    padding-top: 60px;
+}
+.header{
+    background: rgba(0,0,0,.5);
+}
+
+.itemWrap {
+    display:  flex;
+    flex-direction:  row;
+    width:  100%;
+    padding:  6px;
+}
+
+.itemWrap:nth-child(even) {
+    background: #f0f0f0;
+}
+
+.itemWrap div {
+    padding: 0 5px;
+    box-sizing:  border-box;
+}
+
+.NotFound{
+    background: rgb(255, 67, 67) !important;
+}
+
+.Found{
+    background: rgb(60, 255, 60)  !important;
+}
+
+.functions {
+    width:  100%;
+    float:  left;
+}
+
+.StopAction {
+    float: left;
+    padding:  7px 10px;
+    cursor:  pointer;
+    transition: background .7s;
+}
+
+.StopAction:hover{
+    background: rgb(163, 163, 163);
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    /* margin: 100px auto; */
+    background-color: #02ffdc;
+    border-radius: 100%;
+    -webkit-animation: sk-scaleout .6s infinite ease-in-out;
+    animation: sk-scaleout .6s infinite ease-in-out;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 8;
+    margin: 0;
+}
+
+
+.foneApiNotFOundChangeDIV {
+    display: none;
+}
+
+a .name {
+    color:  #333;
+    font-weight:  600;
+}
+
+.functions .label {
+    float:  right;
+    color:  #333;
+    font-size:  14px;
+}
+
+.label.total:before {
+    content:  "Total : ";
+}
+
+.label.found:before {
+    content: "Found : ";
+}
+
+.label.notFound:before {
+    content:  "Missing : ";
+}

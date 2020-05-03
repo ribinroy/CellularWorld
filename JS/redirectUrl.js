@@ -1,0 +1,1 @@
+window.location.href = window.location.href.replace(window.location.href.split('/')[3] + "/", "");

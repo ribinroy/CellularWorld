@@ -1,0 +1,328 @@
+a {
+    text-decoration:  none !important;
+}
+
+* {
+    font-family: "Roboto";
+}
+
+.adminOnly,
+.devOnly{
+    display: none;
+}
+
+.noPadding{
+    padding: 0px !important;
+}
+
+.menuBarsContainer {
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    margin-top: 7px;
+    z-index: 100;
+}
+
+/* .mainBox{
+    min-height: calc(100vh - 160px);
+} */
+
+.mainBox {
+    min-height: calc(100vh - 145px) !important;
+    margin-top: 55px !important;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 29px;
+    height: 2px;
+    background-color: #c0c0c0;
+    margin: 6px 0;
+    transition: 0.4s;
+    box-shadow: 0px 0px 1px #000;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 3px);
+    transform: rotate(-45deg) translate(-4px, 3px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 55px;
+    width: 100%;
+    /* background: linear-gradient(rgba(0,0,0,.5),rgba(255,255,255,0)); */
+    z-index: 1;
+    /* background: rgba(0,0,0,.5); */
+    /* background: url(../Images/SiteMain/Misc/shadeTopDown.png); */
+    background-repeat: repeat-x;
+    padding: 5px;
+    transition: 1s;
+}
+
+
+.logoCellularWorld {
+    width: 200px;
+    height: 38px !important;
+    margin-top: 1px;
+    height: 100%;
+    background: url(../Images/SiteMain/cellularWorldWhiteFullReso.png);
+    display: block;
+    float: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.header .container {
+    height:  100%;
+}
+
+.menuNav {
+    float:  left;
+    height:  100%;
+    width: calc(100% - 200px);
+    padding-top: 14px;
+    transition: .4s;
+}
+
+a.menuNavLink {
+    float:  right;
+    text-decoration:  none !important;
+    padding: 0 15px;
+    color: #fff !important;
+    /* font-weight:  600; */
+    text-shadow:  0px 0px 3px #000;
+    height: 100%;
+    transition:  text-shadow .3s;
+    /* display:  flex; */
+    font-size:  14px;
+    /* justify-content:  center; */
+    /* vertical-align:  middle; */
+}
+
+a.menuNavLink:hover {
+    text-shadow:  0px 0px 5px #000;
+}
+
+.openOnWrap {
+    width:  100%;
+    margin-top: 20px;
+}
+
+.openOn {
+    text-align:  center;
+    color:  #fff;
+    margin: 0 auto;
+}
+
+
+.header.blackOut {
+    /* background:  #333; */
+    background: rgba(0,0,0,.5);
+    box-shadow: 0px 38px 100px inset;
+    height:  55px;
+    padding:  5px;
+}
+
+.mobileNavContainer {
+    width: 100vw;
+    margin-top: 55px;
+    height: calc(100vh - 55px);
+    display: block;
+    position: fixed;
+    /* background: rgba(0,0,0,.3); */
+    top: 0px;
+    left: 0px;
+    /* box-shadow: 0px 0px 100px #808080; */
+    border-left: 1px solid #000;
+    transition: all .3s;
+    transform: translateX(-150vw);
+    z-index: 16;
+}
+
+.mobileNavContainer.active {
+    transform: translateX(0%);
+}
+
+.mobileNavBox{
+   width: 70%;
+   background: #333;
+}
+
+.mobileNavContents {
+    width: 300px;
+    padding: 15px;
+    height: 100%;
+    background: #333;
+    color: #fff;
+    overflow-y: auto;
+}
+
+a.mobileNavLink {
+    text-decoration:  none !important;
+    color: #fff !important;
+    display:  block;
+    padding:  10px;
+    font-size:  14px;
+    clear: both;
+    border-radius: 0px;
+    transition: border-radius .4s, background .3s;
+}
+.overlayShade.active {
+    width:  100vw;
+    height:  calc(100vh - 55px);
+    position: fixed;
+    top: 55px;
+    background: rgba(0,0,0,.5);
+    transition:  background .6s;
+}
+
+.popUpWrap {
+    position: fixed;
+    left: 10px;
+    width: calc(100vw - 30px);
+    height: calc(100vh - 65px);
+    top: 55px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px #808080;
+    overflow: hidden;
+    transform: scale(0);
+}
+
+iframe.popUpFrame {
+    width:  100%;
+    height: calc(100% - 50px);
+    border: 0;
+}
+
+.popUpTitle {
+    margin-left: 10px;
+    padding: 15px;
+    box-sizing:  border-box;
+    height:  50px;
+    font-size:  15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 65px);
+    float:  left;
+}
+
+.popUpClose {
+    width:  50px;
+    float:  left;
+    height:  50px;
+    padding: 11px;
+    box-sizing:  border-box;
+    font-size: 21px;
+    cursor:  pointer;
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+      -webkit-animation-name: zoomIn;
+  
+      animation-duration: .3s;
+      -webkit-animation-duration: .3s;
+  
+      animation-timing-function: ease;
+      -webkit-animation-timing-function: ease;
+  
+       animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+  }
+  a.menuNavLink.active {
+    background:  white;
+    height:  31px;
+    padding-top:  10px;
+    margin-top: -13px;
+    border-radius: 10px 10px 0 0;
+    padding-top: 15px;
+    height:  50px;
+    color: #333 !important;
+    text-shadow: none;
+    font-weight: 600;
+    animation: hopeIn .7s 1;
+}
+
+@keyframes hopeIn{
+    from{transform:translateY(70%)}
+}
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0);
+    }
+  
+    to {
+        transform: scale(1);
+    }
+  }
+  
+  @-webkit-keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+  
+    to {
+        transform: scale(1);
+    }
+  }
+
+  a.menuNavLink:not(.active):hover {
+    background: linear-gradient(rgba(0,0,0,0), #353535);
+    height: 31px;
+    padding-top: 10px;
+    margin-top: -19px;
+    border-radius: 0 0 10px 10px;
+    padding-top: 19px;
+    height: 62px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+a.menuNavLink{
+    transition: all .4s, box-shadow 1s;
+    border-radius: 0 0 10px 10px;
+}
+
+a.mobileNavLink.active {
+    background: #31708f;
+    margin-right:  -15px;
+    border-radius: 4px 0px 0 4px;
+}
+
+@keyframes colorChange{
+    from{background:#337ab7}
+    to{background:#000}
+}
+
+.colorChangeAdderQuick{
+    animation: colorChange 1s infinite;
+    animation-direction: alternate;
+}
+
+.colorChangeAdderSlow{
+    animation: colorChange 15s infinite;
+    animation-direction: alternate;
+}
+
+@media only screen and (max-width: 750px) {
+    .menuBarsContainer {
+        float:  left;
+    }
+
+    a.logoCellularWorld {
+        float:  right;
+        width: calc(100% - 68px);
+        background-position:  center;
+        margin-right: 39px;
+    }
+}

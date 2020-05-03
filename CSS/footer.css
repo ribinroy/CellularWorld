@@ -1,0 +1,172 @@
+/* -----------------------Spinner------------------- */
+.spinner {
+    width: 40vmin;
+    height: 40vmin;
+    margin: 100px auto;
+    background-color: #333;
+    border-radius: 100%;
+    -webkit-animation: sk-scaleout .6s infinite ease-in-out;
+    animation: sk-scaleout .6s infinite ease-in-out;
+}
+  
+  @-webkit-keyframes sk-scaleout {
+    0% { -webkit-transform: scale(0) }
+    100% {
+      -webkit-transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes sk-scaleout {
+    0% { 
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    } 100% {
+      -webkit-transform: scale(1.0);
+      transform: scale(1.0);
+      opacity: 0;
+    }
+  }
+/* -----------------Spinner codes ends------------------   */
+
+.footerSection {
+    min-height: 70px;
+    background: #333;
+    margin-top: 20px;
+    float: left;
+    width: 100%;
+}
+
+.footerSection .container {
+    padding:  15px;
+    box-sizing:  border-box;
+}
+
+.addressWrap {
+    color:  #c0c0c0;
+}
+
+.phoneNo {
+    color:  #c0c0c0;
+}
+
+.socialLinks {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.facebookLink {
+    background: url(../Images/SiteMain/Icons/fb.png) no-repeat;
+    height: 39px;
+    width: 39px;
+    background-size:  contain;
+    cursor:  pointer;
+    float:  left;
+    /* margin: 10px; */
+}
+
+.whatsappNo {
+    background: url(../Images/SiteMain/Icons/whatsapp.png) no-repeat;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    cursor: pointer;
+    float: left;
+    /* margin: 10px; */
+}
+
+a.emailLink {
+    background: url(../Images/SiteMain/Icons/gmail.png) no-repeat;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    cursor: pointer;
+    float: left;
+    /* margin: 10px; */
+}
+
+
+.overlayIcon {
+    position:  relative;
+    opacity: .5;
+    transition: all .3s;
+}
+
+.overlayIcon:hover {
+    opacity:  1;
+    transform: rotate(360deg);
+}
+
+.phoneNo a {
+    border-right: 1px solid #808080;
+    padding:  0 10px;
+    color:  #c0c0c0 !important;
+    transition:  color .4s;
+}
+
+.phoneNo a:first-child {
+    padding-left: 0;
+}
+
+.phoneNo a:last-child {
+    border-right:  0;
+    padding-right: 0px;
+}
+
+.phoneNo a:hover {
+    color:  #f0f0f0 !important;
+}
+
+.paddingLeft_0{
+    padding-left: 0 !important;
+}
+
+.paddingRight_0{
+    padding-right: 0 !important;
+}
+
+.ribinRoys {
+    float:  right;
+    text-align:  right;
+    color: #c0c0c0;
+    padding: 10px 0px;
+    box-sizing:  border-box;
+    width: 100%;
+}
+
+.ribinRoys a {
+    color:  #c0c0c0 !important;
+    transition: color .3s;
+}
+
+.ribinRoys a:hover {
+    color: #f0f0f0 !important;
+}
+
+@media only screen and (max-width: 750px) {
+    .addressWrap, .phoneNo {
+        text-align:  center;
+        margin-bottom: 3px;
+    }
+
+    .ribinRoys {
+        text-align:  center;
+        padding-right: 10px;
+    }
+
+    .footerSection .paddingLeft_0 {
+        padding-left: 15px !important;
+    }
+ }
+
+ @media only screen and (max-width: 990px){
+    .ribinRoys {
+        padding: 0;
+        text-align: center;
+        margin-top: 5px;
+        padding-right: 10px !important;
+    }
+ }

@@ -1,0 +1,2 @@
+AuthName "PublicFiles"
+AuthUserFile "/home/cellularworld/.htpasswds/public_html/passwd"

@@ -1,0 +1,505 @@
+.header.blackOut {
+    background: rgba(0,0,0,.5);
+}
+
+.header {
+    background: rgba(0,0,0,1);
+}
+
+.devicePageWrap {
+    margin-top: 90px;
+}
+
+.deviceNameHeading {
+    display: inline-block;
+    font-size:  30px;
+}
+
+.devicePerSpecWrap {
+    width:  100%;
+    clear:  both;
+    /* padding: 8px 5px; */
+    border-bottom:  1px solid #d3d1d1;
+    position:  relative;
+    display:  block;
+}
+
+.deviceSpecHeading {
+    float:  left;
+    width: 30%;
+    margin: 5px 0px;
+}
+
+.deviceSpecDetail {
+    float: left;
+    width:  70%;
+    height: inherit;
+    margin: 5px 0px;
+}
+
+.detailsWrapImage {
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: contain !important;
+    position: relative;
+    transition: transform .5s;
+    animation: zoomInImage 2s 1 alternate;
+}
+
+.detailsWrapImageContainer {
+    overflow:  hidden;
+    float:  left;
+    display:  block;
+    position:  fixed;
+    margin-top: 15px;
+    height: calc(100vh - 141px);
+    width: calc(28.33% - 15px);
+    left:100px;
+}
+
+.notFound{
+    display: none;
+    text-align: center;
+}
+
+.detailsInformationWrap {
+    margin-top:  15px;
+}
+
+.deviceNotFound {
+    text-align:  center;
+    padding-top:  25px;
+    color: #808080;
+    display: none;
+}
+
+.devicePriceDetails {
+    display: inline-block;
+    /* width:  100%; */
+    /* margin-top:  20px; */
+}
+
+.realPrice {
+    font-size: 40px;
+}
+
+.OfferPrice {
+    font-size:  40px;
+    margin-left:  18px;
+    margin-top:  -10px;
+}
+
+.realPrice.offerFound {
+    font-size: 17px;
+    margin-left: 18px;
+    text-decoration: line-through;
+}
+
+.OfferPrice:before {
+    content:  "₹";
+}
+
+.realPrice:before {
+    content:  "₹";
+}
+
+.devicePerSpecWrap:first-child {
+    border-bottom:  0px;
+}
+
+.deviceDetailsTab {
+    width:  100%;
+    display:  flex;
+    flex-direction:  row;
+    flex: 1;
+    border-radius: 4px;
+    overflow:  hidden;
+}
+
+.deviceDetailsTabHeader {
+    flex: 1;
+    min-width: 145px;
+    text-align:  center;
+    background: #e3e3e4;
+    padding:  4px;
+    box-sizing:  border-box;
+    cursor:  pointer;
+    border-right: 1px solid #888888;
+    transition:  background 1s;
+    color: #404040;
+}
+
+.deviceDetailsTabHeader:last-child {
+    border-right:  none;
+}
+
+.deviceDetailsTabHeader:hover {
+    background: #ececec;
+}
+
+.deviceDetailsTabHeader.active {
+    background: #c3c3c3;
+}
+
+.deviceDetailsTabContainerItem {
+    display: none;
+    /* transform: translateX(-100%); */
+    transition: transform .5s;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.fb-comments {
+    width:  100%;
+}
+
+.deviceDetailsTabContainerItem.active {
+    display: block;
+    /* transform: translateX(0%); */
+}
+
+.deviceDetailsTabContainer {
+    overflow:  hidden;
+}
+
+@media only screen and (max-width: 750px) {
+    .detailsWrapImageContainer, .laodingImage {
+         height: 200px !important;
+         margin-bottom: 20px;
+         left: 0px !important;
+     }
+     .loadingDetails.avoidAnim {
+        margin-top: 225px !important;
+    }
+    
+    .laodingImage {
+        left:  0 !important;
+        margin-left: calc(25% + 7px) !important;
+        width: 50% !important;
+    }
+    
+    .loadingName {
+        height: 35px !important;
+        width: 85% !important;
+        margin-left: 7.5% !important;
+    }
+    
+    .loadingPrice {
+        height:  30px !important;
+        margin:  0 auto !important;
+        margin-top:  5px !important;
+        margin-bottom:  5px !important;
+        width: 40% !important;
+        margin-left: 30% !important;
+    }
+    
+    .loadingDetailsItems {
+        height:  22px !important;
+    }
+
+    .loadingDiv.active {
+        height: calc(100% - 206px) !important;
+    }
+ }
+
+ @media only screen and (max-width: 990px) {
+    .detailsWrapImageContainer, .laodingImage {
+         width: calc(37vw);
+     }
+    .deviceNameHeading {
+        text-align:center !important;
+        width: 100% !important;
+    }    
+    .devicePriceDetails {
+        width: 100% !important;
+        text-align:  center !important;
+        margin-top:  0px;
+    }
+ }
+/* =========================Admin Function styles =========================== */
+ .adminConsoleWrap {
+    height: calc(100% - 55px);
+    min-width: 300px;
+    background: #fff;
+    position:  fixed;
+    right:  0;
+    top: 55px;
+    max-width:  50vw;
+    padding:  15px;
+    box-sizing:  border-box;
+    box-shadow:  0px 0px 70px  #333;
+    transform: translateX(calc(100% + 70px));
+    transition:  transform .4s;
+    display: none;
+    z-index: 1;
+}
+
+.adminHeader {
+    text-align:  center;
+    font-size:  16px;
+    margin-bottom:  10px;
+    float: left;
+    width: calc(100% - 10px);
+}
+
+.adminHeader span{
+    font-size: 12px;
+}
+
+.adminConsoleWrap.active {
+    transform:  translateX(0%);
+}
+
+.hideAdminConsole {
+    float:  left;
+    font-size:  15px;
+    cursor:  pointer;
+    transition:  color .5s;
+}
+
+.hideAdminConsole:hover {
+    color:  red;
+}
+
+.adminConsoleButton {
+    position:  fixed;
+    right: -34px;
+    transform:  translateX(100%) rotate(-90deg);
+    background:  #c0c0c0;
+    top: 25vh;
+    padding:  5px;
+    border-radius: 5px 5px 0px 0px;
+    transition:  transform .4s, background .4s; 
+    cursor:  pointer;
+    display: none;
+}
+
+.adminConsoleButton:hover {
+    background: #C0C0D3;
+}
+
+.adminConsoleButton.active {
+    transform:  translateX(0%)  rotate(-90deg);
+}
+
+.adminItem {
+    padding:  5px;
+    border: 1px solid #c0c0c0;
+    margin:  5px;
+    clear:  both;
+    border-radius:  5px;
+    transition: background .3s;
+    cursor: copy;
+}
+
+
+.adminItem:hover{
+    background: #f0f0f0 !important;
+}
+
+.deleteFunction {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: #ea4040;
+    border-radius: 50%;
+    margin: 5px;
+    z-index: 5;
+    padding-left: 6px;
+    padding-top: 1px;
+    color: #fff !important;
+}
+
+.unavailable{
+    opacity: .6;
+}
+
+.editFunction {
+    position:  absolute;
+    top:  0;
+    right:  0;
+    cursor:  pointer;
+    width: 20px;
+    height:  20px;
+    background: #59c73e;
+    border-radius:  50%;
+    margin:  5px;
+    z-index: 5;
+    padding-left: 6px;
+    padding-top: 1px;
+    color: #fff !important;
+}
+.adminButtons {
+    position:  fixed;
+    top: 11vh;
+    right: 0;
+}
+
+.adminItem.blue {
+    background: #cefaf9;
+}
+
+.adminItem.red {
+    background: #ffb2b2;
+}
+
+.adminItem.green {
+    background: #9cff9c;
+}
+
+.detailsWrapImage.unavailable:after {
+    content: "Unavailable";
+    width: 100%;
+    height: 65%;
+    position: absolute;
+    /* top: 0; */
+    text-align: center;
+    bottom: 10px;
+    /* transform: rotate(-90deg); */
+    font-size: 45px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    left: 0;
+    color: #939393;
+}
+
+
+/* =========================Admin Function styles ends=========================== */
+ @media only screen and (max-width: 770px) {
+    .detailsWrapImageContainer {
+         width: 100%;
+         position:relative;
+     }
+
+     .detailsWrapImage.unavailable:after {
+        top: 32%;
+        text-align: center;
+        font-size: 11vmin;
+        transform: rotate(0deg) !important;
+    }
+ }
+
+ @keyframes zoomInImage{
+    from{
+        transform:scale(0);
+    }
+    to{
+        transform:scale(1);
+    }
+}
+
+.devicePDFIcon {
+    float:  right;
+    width: 72px;
+    text-align: right;
+    padding: 27px 0;
+    cursor:  pointer;
+    background: url('/Images/SiteMain/Icons/Brochure.png') no-repeat center;
+    background-size:  contain;
+    transition:  transform .2s;
+    display: none;
+}
+
+.devicePDFIcon {
+    position:  absolute;
+    top: 56px;
+    right:  7px;
+}
+.devicePDFIcon:hover {
+    transform:  scale(1.05);
+}
+
+/* ----------------------Loading Styles new---------------- */
+.laodingImage {
+    background:  #c0c0c0;
+    overflow: hidden;
+    float: left;
+    display: block;
+    position: fixed;
+    margin-top: 15px;
+    height: calc(100vh - 160px);
+    width: calc(28.33% - 15px);
+    left: 100px;
+    overflow: hidden;
+    transition: background .5s;
+}
+
+.loadingDetails {
+    width:  80%;
+    /* height: 50px; */
+    /* background:  #e6e1e1; */
+    margin-left:  50px;
+    float:  left;
+    position: relative;
+    overflow: hidden;
+}
+
+.loadingPrice {
+    width: 246px;
+    height: 38px;
+    background:  #e6e1e1;
+    font-size:  large;
+    float:  left;
+    clear:  both;
+    margin-top:  5px;
+    margin-bottom: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loadingName {
+    height: 50px;
+    background: #e6e1e1;
+    float:  left;
+    width: 600px;
+    clear: both;
+    position: relative;
+    overflow: hidden;
+}
+
+.loadingDetailsItems {
+    float:  left;
+    width:  100%;
+    background:  #e6e1e1;
+    height: 28px;
+    margin-top:  5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.loadingDiv.active {
+    position: fixed;
+    width: 100%;
+    height: calc(100% - 140px);
+    top: 0;
+    left: 0;
+    margin-top: 65px;
+    overflow: hidden;
+}
+
+.loadingDiv div:not(.avoidAnim):before,
+.laodingImage:before {
+    content:  "";
+    width:  100%;
+    height:  100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .8), rgba(255, 255, 255, 0));
+    position:  absolute;
+    animation: toRight .7s infinite alternate;
+}
+
+@keyframes toRight{
+    from{
+        transform   : translate(-100%);
+    }
+    to{
+        transform   : translate(100%);        
+    }
+}
+/* ----------------------Loading Styles new ends---------------- */

@@ -1,0 +1,875 @@
+.header.blackOut {
+    background: rgba(0,0,0,.5);
+    box-shadow: 0px 38px 100px inset;
+}
+
+.header {
+    background: rgba(0,0,0,1);
+}
+
+.devicePageWrap {
+    margin-top: 70px;
+    padding-top: 15px;
+}
+
+a.deviceWrap,
+.loadingDummyItem {
+    position: relative;
+    min-width: 210px;
+    height: 250px;
+    /* background: red; */
+    border: 1px solid #f0f0f0;
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 1px 1px #f0f0f0;
+    transition: box-shadow .5s, transform .2s;
+    box-shadow: 0px 0px 10px #c0c0c0 inset;
+    padding: 0px 10px;
+    max-width: 340px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+a.deviceWrap:hover {
+    transform:  scale(1.02);
+}
+
+a.deviceWrap:hover .deviceImage {
+    transform: scale(.98);
+}
+
+a.deviceWrap:hover {
+    box-shadow: 0px 1px 5px #c0c0c0;
+}
+.deviceImageWrap {
+    height: 65% !important;
+    display: block !important;
+    width:  100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.deviceImage {
+    /* float: left; */
+    position:  relative;
+    background: url(../Images/MainPage/DevicesTemplateImages/DefaultDevice.png);
+    background-size: contain !important;
+    background-position:  center !important;
+    background-repeat: no-repeat !important;
+    height: 100%;
+    width: 150px;
+    margin:  0 auto;
+    margin-top: 5px;
+    transition:  .3s margin-top;
+}
+
+.deviceDetailsWrap {
+    height:  35%;
+    text-align:  center;
+    padding-top: 25px;
+    z-index: 1;
+    position: relative;
+}
+
+.devicePrice {
+    position: absolute;
+    font-size: 25px;
+    display: block;
+    width: 100%;
+    margin-top: -45px;
+    color: #000;
+    text-shadow: 0px 0px 11px #fff;
+    line-height: 2;
+    transition: margin-top .3s;
+    font-weight: 700;
+}
+
+.devicePrice span:before {
+    content:  "₹";
+}
+
+.devicePrice span.oldPrice {
+    font-size:  13px;
+    display:  block;
+    margin-bottom: -19px;
+    text-decoration: line-through;
+}
+
+.deviceName {
+    font-size: 19px;
+    color: #1B2A41;
+    /* display: inline; */
+    overflow: hidden;
+    height: 26px;
+}
+
+.deviceWrap:hover .devicePrice {
+    margin-top: -40px;
+}
+
+.deviceDetails {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a.deviceWrap:hover .deviceImage {
+    margin-top:  0px;
+}
+
+.deviceImageWrap:after {
+    content: "";
+    width:  100%;
+    height:  100%;
+    background: linear-gradient(rgba(255,255,255,0) 120px, rgba(255,255,255,1));
+    position:  absolute;
+    left:  0;
+    top: 0;
+    width:  100%;
+    z-index:  1;
+    transition: .4s;
+}
+
+a.deviceWrap:hover .deviceImageWrap:after {
+    opacity: 0;
+}
+
+a.disabled {
+    cursor: default !important;
+}
+.row.searchWrap {
+    width:  100%;
+    margin: 0px !important;
+    margin-bottom: 15px;
+    padding-bottom: 0;
+    box-sizing:  border-box;
+}
+
+.searchInput {
+    width: calc(100% - 90px);
+    float:  right;
+    display:  block;
+}
+
+input#searchInputBox {
+    width: calc(100% - 60px);
+    border-radius: 7px;
+    border: 1px solid #c0c0c0;
+    height: 30px;
+    float: left;
+    padding: 0 5px;
+    margin-left: 5px;
+}
+
+span.searchIcon {
+    width: 45px;
+    /* background:  red; */
+    height:  30px;
+    float: left;
+    cursor:  pointer;
+    color:  #808080;
+    padding: 7px;
+    box-sizing:  border-box;
+    padding-left:  0;
+    margin-left: 10px;
+    background: url("../Images/SiteMain/Icons/search.png");
+    background-size:  contain;
+    background-repeat:  no-repeat;
+}
+
+span.deleteSearchItem {
+    display: block;
+    /* padding:  5px; */
+    font-size: 11px;
+    margin-left:  5px;
+    margin-top: 3px;
+    line-height:  1;
+    float: right;
+    cursor:  pointer;
+}
+
+.searchItem {
+    display: inline-block;
+    padding: 2px 10px;
+    background: #f0f0f0;
+    border-radius:  10px;
+    font-size:  13px;
+    text-align:  center;
+    padding-right:  8px;
+    cursor:  default;
+    border: 1px solid #fff;
+    transition:background .1s;
+    margin: 0 5px;
+}
+
+.searchedItemsWrap {
+    margin: 7px -5px 15px;
+}
+
+.searchItem:hover {
+    background:  #e1ffb1;
+    border: 1px solid #7da453;
+}
+
+.searchItem.toClose {
+    background:  #ff8a65;
+    border: 1px solid #c75b39;
+}
+
+input:focus {
+    outline: none;
+}
+
+.searchBase select {
+    width: 110px;
+    border-radius: 7px;
+    border: 1px solid #c0c0c0;
+    height: 30px;
+    float: left;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.searchBase select:focus {
+    outline:  none;
+}
+
+.priceRange {
+    width: 100%;
+    float: left;
+    margin-left: 15px;
+}
+
+.searchFilterWrap {
+    margin-bottom: 5px;
+    float:  left;
+    width: 100%;
+}
+
+.priceRange input {
+    /* width: calc(100% - 55px); */
+    border-radius: 7px;
+    border: 1px solid #c0c0c0;
+    height: 30px;
+    float: left;
+    padding: 0 5px;
+    width: calc(100% - 36px);
+}
+
+.searchBase {
+    float: left;
+}
+
+.priceLow, .priceHigh {
+    float:  left;
+    width: 50%;
+}
+
+.priceLow span, .priceHigh span {
+    float:  left;
+    margin: 5px 5px 5px 0px;
+}
+
+
+.mobileNavContainer .searchBase select {
+    width:  100% !important;
+}
+
+.mobileNavContainer .searchBase {
+    width:  100%;
+    margin-bottom: 10px;
+}
+
+.mobileNavContainer .priceRange input {
+    width: calc(100% - 40px);
+    float:  left;
+}
+
+.mobileNavContainer .priceLow, .mobileNavContainer .priceHigh {
+    width:  100%;margin-bottom: 10px;
+}
+
+.mobileNavContainer .priceRange {
+    width:  100%;
+    margin-left:  0;
+}
+
+.mobileNavContainer .priceRange span {
+    color: #f0f0f0;
+    width: 35px;
+}
+
+.mobileNavContainer .searchFilterWrap {
+    padding:  10px;
+    box-sizing:  border-box;
+    padding-top:  0;
+    margin-top: 10px;
+}
+
+.editFunction {
+    position:  absolute;
+    top:  0;
+    right:  0;
+    cursor:  pointer;
+    width: 20px;
+    height:  20px;
+    background: #59c73e;
+    border-radius:  50%;
+    margin:  5px;
+    z-index: 5;
+    padding-left: 6px;
+    padding-top: 1px;
+    color: #fff !important;
+}
+
+.orderBy {
+    width: 87px;
+    padding: 4px;
+    float: left;
+    box-sizing:  border-box;
+    margin-left: 3px;
+    cursor:  pointer;
+    border-radius: 5px;
+    border: 1px solid #f0f0f0;
+    transition: background .2s;
+    text-align: center;
+}
+
+.orderBy:hover {
+    background: transparent;
+}
+
+.orderBy.low {
+    background: #e1ffb1;
+    border: 1px solid #7da453;
+}
+
+.orderBy.high {
+    background:  #80d6ff;
+    border: 1px solid #0077c2;
+}
+
+.notFound{
+    display: none;
+    text-align: center;
+}
+
+.rangeSelectorWrap {
+    float:  left;
+    position:  relative;
+    width: 100% !important;
+}
+
+.rangeSelectorWrap input {
+    float:  left;
+    top: 5px !important;
+    position:  absolute;
+    min-width:  100px;
+    background:  none !important;
+    left: 5px !important;
+}
+
+.rangeText {
+    color: #7f7f7f;
+    position:  absolute;
+    top: 25px;
+    float:  left;
+    padding-top:  25px;
+}
+
+.rangeText.rangeMax {
+    float:  right;
+    right:  0px;
+}
+
+.rangeText:before {
+    content:  "₹";
+}
+
+.leftFilterPaneHeading {
+    text-align:  left;
+    color: #545454;
+}
+
+.mobileNavContents .rangeText,.mobileNavContents .sliderHeading {
+    color:#fff;
+}
+
+span.rangeValues {
+    display:  block;
+    float: right;
+    width:  35%;
+    padding:  5px;
+    box-sizing:  border-box;
+}
+
+@media only screen and (max-width: 750px) {
+    .itemInsideImage {
+         margin-top: 8px;
+     }
+     
+    /* ------------------------remove hover on item effects------------------ */
+    .deviceImage {
+        margin-top: 5px;
+    }
+
+    a.deviceWrap .deviceImageWrap:after {
+        opacity: 0;
+    }
+
+    .deviceWrap .devicePrice {
+        margin-top: -37px;
+    }
+    /* ------------------------remove hover on item effects ends------------------ */
+ }
+
+ @media only screen and (max-width: 990px) {
+    .filterShowHideButton {
+        display: none !important;
+    }
+ }
+
+ .deleteFunction {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: #ea4040;
+    border-radius: 50%;
+    margin: 5px;
+    z-index: 5;
+    padding-left: 6px;
+    padding-top: 1px;
+    color: #fff !important;
+}
+
+.unavailableFunction {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: #40eabb;
+    border-radius: 50%;
+    margin: 5px;
+    z-index: 5;
+    padding-left: 6px;
+    padding-top: 1px;
+    color: #fff !important;
+}
+
+a.deviceWrap[unavailable="1"] div {
+    opacity: .6;
+}
+
+a.deviceWrap[unavailable="1"]:after {
+    content: "Unavailable";
+    width:  100%;
+    height:  100%;
+    position:  absolute;
+    top:  0;
+    text-align: center;
+    left: 0;
+    /* transform: rotate(-90deg); */
+    font-size: 17px;
+    padding: 0 20px;
+    box-sizing:  border-box;
+    color: #fff;
+    display:  flex;
+    flex-direction:  column;
+    justify-content:  center;
+    z-index: 3;
+    text-shadow: 0px 0px 33px #fff;
+}
+
+a.deviceWrap[unavailable="1"]:before {
+    content:  "";
+    background: #000;
+    top:  0;
+    left:  0;
+    width:  100%;
+    height:  100%;
+    position:  absolute;
+    z-index: 2;
+    opacity: .3;
+}
+
+a.deviceWrap[unavailable="1"] {
+    box-shadow: 0px 0px 0px;
+}
+
+/* ------------------------------Range Slider CSS------------------------ */
+section.range-slider {
+    position: relative;
+    float: left;
+    text-align: center;
+    margin-top: 15px;
+    width: calc(100% - 5px) !important;
+    height: 75px !important;
+  }
+  section.range-slider input[type="range"] {
+    pointer-events: none;
+    position: absolute;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 14px;
+    background: #F1EFEF;
+    box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
+    -webkit-box-shadow: inset 0 1px 0 0 #cdc6c6, inset 0 -1px 0 0 #d9d4d4;
+    overflow: hidden;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    outline: none;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  section.range-slider input[type="range"]::-webkit-slider-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 1;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 14px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dad8da), color-stop(100%, #413f41));
+    /* android <= 2.2 */
+    background-image: -webkit-linear-gradient(top, #dad8da 0, #413f41 100%);
+    /* older mobile safari and android > 2.2 */
+    background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+    /* W3C */
+  }
+  section.range-slider input[type="range"]::-moz-range-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 14px;
+    background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+    /* W3C */
+  }
+  section.range-slider input[type="range"]::-ms-thumb {
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+    -ms-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 14px;
+    border: 0;
+    background-image: linear-gradient(to bottom, #dad8da 0, #413f41 100%);
+    /* W3C */
+  }
+  section.range-slider input[type="range"]::-moz-range-track {
+    position: relative;
+    z-index: -1;
+    background-color: black;
+    border: 0;
+  }
+  section.range-slider input[type="range"]:last-of-type::-moz-range-track {
+    -moz-appearance: none;
+    background: none transparent;
+    border: 0;
+  }
+  section.range-slider input[type="range"]::-moz-focus-outer {
+    border: 0;
+  }
+
+  /* .priceHidden {
+    display:  none;
+} */
+/* ------------------------------Range Slider CSS Ends------------------------ */
+
+.checkLastFileReached {
+    width:  100%;
+    text-align:  center;
+    height: 45px;
+    border-radius: 4px;
+    background: #e0dfdf;
+    display:  flex;
+    flex-direction:  row;
+    justify-content:  center;
+    align-items:  center;
+    font-weight:  600;
+    font-size:  15px;
+    color: #535353;
+    cursor:  pointer;
+    transition:  background .4s;
+}
+
+.checkLastFileReached:hover {
+    background: #d1d0d0;
+}
+
+.zoomOut {
+    transition:  all .3s;
+    transform: scale(0) !important;
+    animation: outOff .3s 1;
+}
+
+@keyframes outOff{
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(0);
+    }
+}
+
+/* -----------------Filter styles------------- */
+.filterWrap {
+    position:  fixed;
+    width:  100%;
+    height: calc(100% - 75px);
+    left:  0;
+    transition: transform .5s;
+}
+
+.filterWrap.filterHidden {
+    transform: translate(-16%);
+}
+
+.devicesInThisDiv {
+    transition: width .5s;
+    float:  right;
+}
+
+.filterInnerWrap {
+    /* background: #eeee; */
+    height: calc(100vh - 150px);
+    display: block;
+    width: 100%;
+    /* border-right: 2px solid #c0c0c0; */
+    padding-right: 10px;
+    box-shadow: 10px 0px 26px #f0f0f0;
+    border-radius: 5px;
+    position: relative;
+}
+
+.filterItemWrap {
+    float:  left;
+    width:  100%;
+    margin-top: 25px;
+}
+
+.leftFilterPaneHeading {
+    float:  left;
+    width: 100%;
+    display:  block;
+    border-left: 5px solid #c0c0c0;
+    padding-left: 5px;
+    margin-bottom: 3px;
+}
+
+.filterInnerWrap:before {
+    content: "";
+    width: 100%;
+    height: 49px;
+    background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    z-index: 2;
+}
+.filterInnerWrap > div{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    position: relative;
+    padding-bottom: 15px;
+}
+.filterInnerWrap:after {
+    content: "";
+    width: 100%;
+    height: 33px;
+    background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+    position: absolute;
+    bottom: -10px;
+    left:  0;
+}
+
+.filterShowHideButton {
+    position: absolute;
+    right: -19px;
+    width: 40px;
+    border-radius: 5px;
+    height: 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: c;
+    cursor: pointer;
+    background: url("../Images/SiteMain/Icons/resize.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    top: 5px;
+    transition: right .5s;
+}
+
+.filterWrap.filterHidden .filterInnerWrap > div {
+    position: initial;
+}
+
+.filterWrap.filterHidden .filterShowHideButton {
+    right: -22px;
+}
+
+li.brandItem {
+    list-style:  none;
+    font-size:  14px;
+    cursor:  pointer;
+    transition:  color .3s, margin .2s;
+    margin-bottom: 5px;
+}
+
+li.brandItem:hover {
+    /* color: #c5c5c5; */
+    margin-left: 3px;
+}
+
+.brandList ul {
+    padding-left:  15px;
+}
+
+.brandList {
+    float: left;
+}
+
+.mobileNavContents .brandListFilterWrap {
+    margin-top: 10px;
+    float: left;
+}
+.mobileNavContents .leftFilterPaneHeading {
+    color:  #fff;
+}
+.filterInnerWrap > div::-webkit-scrollbar,
+.mobileNavContents::-webkit-scrollbar {
+    width: 4px;
+}
+li.brandItem.active {
+    background: #e2e2e2;
+    padding-left:  9px;
+    border-radius: 3px;
+    font-size:  14px;
+    margin-left: -11px;
+    padding-right: 10px;
+}
+.filterInnerWrap > div::-webkit-scrollbar-track,
+.mobileNavContents::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3); */
+}
+ 
+.mobileNavContents li.brandItem.active {
+    background: #1b1a1a;
+}
+
+.filterInnerWrap > div::-webkit-scrollbar-thumb,
+.mobileNavContents::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+/* ----------------------------Loading Variety Styles ------------------------- */
+.loadingDiv.spinner {
+    width:  100% !important;
+    animation:  none;
+    border-radius:  0;
+    margin:  0;
+    background: rgba(1,1,1,0);
+    height: auto;
+}
+
+.loadingDummyImageDiv {
+    /* float:  left; */
+    width: calc(100% - 45px);
+    background: #e6e1e1;
+    height:  65%;
+    margin:  0 auto;
+    position:  relative;
+    display:  block;
+    margin-top:  10px;
+    border-radius: 5px;
+}
+
+.loadingDummyItem>div:before {
+    content:  "";
+    width:  100%;
+    height:  100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, .8), rgba(255, 255, 255, 0));
+    position:  absolute;
+    animation: toRight .7s infinite alternate;
+}
+
+.loadingDummyPriceDiv {
+    width: calc(100% - 45px);
+    background: #e6e1e1;
+    height: 26px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.loadingDummtDetailsDiv {
+    width: calc(100% - 45px);
+    background: #e6e1e1;
+    height: 26px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+@keyframes flashDown{
+    from{
+        background:white;
+        box-shadow:none;
+    }
+    
+}
+
+@keyframes toRight{
+    from{
+        transform   : translate(-100%);
+    }
+    to{
+        transform   : translate(100%);        
+    }
+}
+
+.loadingDummyItem {
+    animation: flashDown 1s infinite alternate;
+    opacity: .6;
+}
+
+/* ----------------------------Loading Variety Styles Ends------------------------- */
+
+.additionalFilter {
+    float:  left;
+    width:  100%;
+}
+
+.additionalFilter label {
+    font-weight:  500;
+    padding-left:  4px;
+    float:  left;
+    padding-top: 1px;
+}
+
+.additionalFilter input {
+    float:  left;
+}

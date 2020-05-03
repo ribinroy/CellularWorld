@@ -1,0 +1,50 @@
+.header {
+    display: none;
+}
+
+.footerSection {
+    display:  none;
+}
+
+.pdfMainWrap {
+    width:  100%;
+    height: calc(100vh - 4px);
+}
+
+.pdf-title {
+    display: none !important;
+}
+
+span.pdf-page-count {
+    color: #fff;
+    background:  #000;
+    height: 22px;
+    padding-top:  2px;
+}
+
+button {
+    border: 0;
+    width: 100%;
+    background:  rgba(1,1,1);
+    text-align:  center;
+}
+
+.pdf-button {
+    width: calc(25% - 29px);
+    float: left;
+    /* border-right: 2px solid #fff; */
+    /* margin-right: 2px; */
+    display: block !important;
+    box-sizing: border-box !important;
+    position: relative;
+    overflow: hidden;
+}
+
+span.pdf-page-count {
+    display:  block;
+    width: 100%;
+}
+
+button:hover {
+    background: rgba(1,1,1,.6);
+}

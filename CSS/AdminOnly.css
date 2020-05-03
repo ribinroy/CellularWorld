@@ -1,0 +1,73 @@
+.mainBox {
+    min-height: calc(100vh - 90px);
+}
+
+.header {
+    background: rgba(0,0,0,.8);
+}
+
+.adminInputWrap,
+.changePassword {
+    display:  flex;
+    justify-content:  center;
+    align-items:  center;
+    height: calc(100vh - 90px);
+    /* background:  red; */
+    flex-direction: column;
+}
+
+.inputArea {
+    height: 180px;
+    /* background:  blue; */
+    display:  flex;
+    flex-direction:  column;
+    align-items:  center;
+    justify-content:  center;
+    border: 1px solid #f0f0f0;
+    width:  300px;
+    border-radius:  10px;
+    transition: all .2s;
+}
+
+.inputArea:hover {
+    border: 1px solid #c0c0c0;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow:  0px 0px 10px #c0c0c0;
+    height:  250px;
+}
+
+.inputArea input {
+    margin:  5px;
+    border: 1px solid #c0c0c0;
+    border-radius:  5px;
+    padding:  4px;
+}
+
+.error {
+    color:  #c75b39;
+    text-align:  center;
+    margin:  5px;
+}
+
+.changePassword .inputArea {
+    height: 300px;
+}
+
+.UsefulLinks {
+    margin-top:  10px;
+    border: 1px solid #fff;
+    transition: all .4s;
+    text-align: center;
+}
+
+.UsefulLinks a {
+    padding:  5px;
+    border-radius:  5px;
+}
+
+.UsefulLinks a:hover {
+    padding:  5px;
+    background: #d9edf7;
+    border: 1px solid #337ab7;
+}
